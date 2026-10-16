@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    user-select: none;
+}
+
+body {
+    background: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.sim-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 950px;
+    overflow: hidden;
+    border: 1px solid #cbd5e1;
+}
+
+.sim-header {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 18px 24px;
+    font-weight: 700;
+    font-size: 18px;
+    border-bottom: 2px solid #1e293b;
+}
+
+.instructions {
+    background: #f8fafc;
+    padding: 14px 24px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 13px;
+    color: #475569;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.35;
+    transition: opacity 0.3s ease;
+}
+
+.step.active {
+    opacity: 1;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.step-num {
+    background: #cbd5e1;
+    color: #1e293b;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.step.active .step-num {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.canvas-area {
+    background: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.canvas-wrapper {
+    position: relative;
+    width: 850px;
+    height: 450px;
+    background: #ffffff;
+    border: 2px solid #94a3b8;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);
+}
+
+canvas {
+    display: block;
+    width: 850px;
+    height: 450px;
+    cursor: grab;
+}
+
+canvas:active {
+    cursor: grabbing;
+}
+
+.dashboard {
+    background: #f8fafc;
+    padding: 16px 24px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.metric-group {
+    display: flex;
+    gap: 12px;
+}
+
+.metric {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.metric-val {
+    color: #2563eb;
+    margin-left: 4px;
+}
+
+.metric-val.hot {
+    color: #dc2626;
+}
+
+#statusDisplay {
+    max-width: 400px;
+    display: inline-block;
+}
+
+.btn-reset {
+    background: #475569;
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.btn-reset:hover {
+    background: #334155;
+}

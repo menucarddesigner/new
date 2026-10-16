@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Zinc + HCl Lab Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sim-container">
+    <div class="sim-header">
+        Advanced Lab Workbench: Direct Manipulation Zinc + HCl Reaction
+    </div>
+    <div class="instructions">
+        <div class="step active" id="step0"><div class="step-num">0</div> Wear Gloves</div>
+        <div class="step" id="step1"><div class="step-num">1</div> Pour Zinc Box into Flask</div>
+        <div class="step" id="step2"><div class="step-num">2</div> Pour Acid Tube into Flask</div>
+        <div class="step" id="step3"><div class="step-num">3</div> Bring Match near Flask mouth</div>
+    </div>
+    <div class="canvas-area">
+        <div class="canvas-wrapper">
+            <canvas id="labCanvas" width="850" height="450"></canvas>
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="metric-group">
+            <div class="metric">Flask Temp:<span id="tempDisplay" class="metric-val">25.0 °C</span></div>
+            <div class="metric">Status:<span id="statusDisplay" class="metric-val">Wear Safety Gloves</span></div>
+        </div>
+        <button class="btn-reset" id="resetBtn">Reset Workbench</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
